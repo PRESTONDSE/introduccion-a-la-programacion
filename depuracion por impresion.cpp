@@ -24,12 +24,36 @@ B=absoluto(B);
         R=A%B;
         printf("R=%d\tB=%d\n",R,B);
         B=(R==0)?B:R;
+        /*_asm("mov $0x0,%eax"); codigo de ensamblador en linea*/
+         
+         R=A%B;
+        printf("R=%d\tB=%d\n",R,B);
+        B=(R==0)?B:R;
+         R=A%B;
+        printf("R=%d\tB=%d\n",R,B);
+        B=(R==0)?B:R;
+         R=A%B;
+        printf("R=%d\tB=%d\n",R,B);
+        B=(R==0)?B:R;
+         R=A%B;
+        printf("R=%d\tB=%d\n",R,B);
+        B=(R==0)?B:R;
 
- goto inicio;
- salida:
+ //goto inicio;  
+// salida: //R and_eq B;
+ 
+ A=-1;
+  int i;
+ printf("\n");
+ for (i=31 ;i>=1; i--){
+      B=A>>i;
+      printf("%d",B&1);
+}                 
+ 
+ 
         
         //R=
         
     system("PAUSE");
-    return EXIT_SUCCESS;
+    return 0;
 }
